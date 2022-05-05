@@ -79,12 +79,11 @@ h3 {
   margin-bottom: 10rem;
 }
 
-.container {
+/* .container {
   width: 120rem;
-  margin: auto;
 }
 
-/* setting the introduce section */
+ */ /* setting the introduce section */
 .intro {
   width: 100%;
   height: 50rem;
@@ -117,7 +116,7 @@ h3 {
   @include con-flex(flex, column, space-evenly);
   position: absolute;
   top: 5rem;
-  right: 45rem;
+  right: 0;
   width: 60%;
   height: 38rem;
   padding: 0.5rem 1.5rem;
@@ -150,9 +149,6 @@ h3 {
 }
 
 /* the 3 main projects section */
-.project {
-  margin-left: 1.5rem;
-}
 .project img {
   @include image(45rem, 25rem, cover);
 }
@@ -270,6 +266,7 @@ h3 {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 0.7fr;
+  margin: 15rem 0;
 }
 
 .asia .asia-text {
@@ -302,7 +299,14 @@ h3 {
     height: 50%;
     position: relative;
   }
-
+  .para-card img {
+    @include image(100%, 100%, cover);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2rem;
+    border-radius: $border-radius;
+  }
   .para-card::after,
   .para-card::before {
     content: "";
@@ -344,19 +348,12 @@ h3 {
     opacity: 1;
   }
 
+  /*setting the more project text and button */
   .para-sub h3 {
     padding-bottom: 2rem;
+    font-size: 2.5rem;
   }
 
-  .para-card img {
-    @include image(100%, 100%, cover);
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 2rem;
-    border-radius: $border-radius;
-  }
-  /*setting the more project text and button */
   .para-sub {
     position: absolute;
     top: 50%;
@@ -403,52 +400,35 @@ h3 {
   width: 45rem;
   height: 25rem;
   margin-top: 20rem;
-  margin-left: 2rem;
   padding: 4rem 5rem;
   box-shadow: 0px -2px 25px $clr-article-bg;
   border-radius: $border-radius;
   line-height: 3rem;
-}
 
-.fa-envelope,
-.fa-github {
-  margin-right: 0.5rem;
-  font-size: 2rem;
-}
+  .fa-envelope,
+  .fa-github {
+    margin-right: 0.5rem;
+    font-size: 2rem;
+  }
 
-.contact h2 {
-  font-family: "Oleo Script", cursive;
-  font-size: 4rem;
-  padding-bottom: 1.5rem;
-}
+  h2 {
+    font-family: "Oleo Script", cursive;
+    font-size: 4rem;
+    padding-bottom: 1.5rem;
+  }
 
-.contact a {
-  color: $clr-light-text;
-}
+  a {
+    color: $clr-light-text;
+  }
 
-.contact a:hover {
-  font-weight: bold;
+  a:hover {
+    font-weight: bold;
+  }
 }
-
 /* setting the responsive screen */
 @media screen and (min-width: 786px) {
-  .intro:hover .intro-text {
-    transform: translateX(25%);
-  }
-  .intro-text {
-    right: 0;
-  }
-
-  .more-project {
-    flex-direction: row;
-  }
-  .contact {
-    margin: auto;
-  }
-}
-@media screen and (min-width: 900px) {
   .project {
-    margin-left: 1.5rem;
+    margin-left: 10rem;
   }
   .empty {
     display: block;
@@ -458,7 +438,7 @@ h3 {
   .vietnam,
   .cuckoo {
     display: grid;
-    grid-template-columns: 1fr 1fr 7rem;
+    grid-template-columns: 1.5fr 1fr 18rem;
     grid-template-rows: 3rem 1fr 5rem;
   }
 
@@ -481,7 +461,7 @@ h3 {
   /* setting responsive for Asia market article */
   .asia {
     display: grid;
-    grid-template-columns: 7rem 1fr 1fr;
+    grid-template-columns: 7rem 1fr 1.5fr;
     grid-template-rows: 3rem 1fr 5rem;
   }
 
@@ -499,6 +479,18 @@ h3 {
   .empty {
     grid-column: 1/2;
     grid-row: 2/3;
+  }
+
+  .more-project {
+    flex-direction: row;
+  }
+  .contact {
+    margin: 20rem auto;
+  }
+}
+@media screen and (min-width: 900px) {
+  .intro:hover .intro-text {
+    transform: translateX(25%);
   }
 }
 
