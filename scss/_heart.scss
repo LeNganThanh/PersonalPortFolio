@@ -1,0 +1,68 @@
+/* setting the common */
+$clr-very-dark-bg: hsl(179, 100%, 13%);
+$clr-article-bg: hsl(184, 100%, 22%);
+$clr-highlight-color: hsl(31, 77%, 52%);
+$clr-light-text: hsla(0, 0%, 100%, 0.75);
+$clr-border-color: hsl(0, 0%, 95%);
+$clr-heart-color: hsl(183, 43%, 84%);
+
+$clr-gradient: linear-gradient(
+  to top,
+  $clr-very-dark-bg,
+  $clr-article-bg,
+  $clr-border-color,
+  $clr-light-text
+);
+
+$border-radius: 10px;
+$text-line-high: 2.2rem;
+
+/* a heart beating */
+.heart {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-right: 2px solid $clr-light-text;
+  border-bottom: 2px solid $clr-light-text;
+  position: relative;
+  margin-left: 1.5rem;
+  margin-bottom: 0.2rem;
+  transform: rotate(45deg);
+  animation: heart-beat 1.5s infinite;
+}
+.heart::after,
+.heart::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  transform: rotate(45deg);
+  border-radius: 50%;
+}
+.heart::after {
+  left: -7px;
+  border-left: 2px solid $clr-light-text;
+  border-bottom: 2px solid $clr-light-text;
+}
+.heart::before {
+  top: -7px;
+  border-left: 2px solid $clr-light-text;
+  border-top: 2px solid $clr-light-text;
+}
+.heart:hover {
+  animation-play-state: paused;
+  background-color: $clr-heart-color;
+}
+.heart:hover::after,
+.heart:hover::before {
+  background-color: $clr-heart-color;
+}
+@keyframes heart-beat {
+  0% {
+    transform: scale(1) rotate(45deg);
+  }
+  50% {
+    transform: scale(0.7) rotate(45deg);
+  }
+}

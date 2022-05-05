@@ -1,0 +1,804 @@
+@import url("https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&display=swap");
+/* setting the common */
+/* a heart beating */
+.heart {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.75);
+  position: relative;
+  margin-left: 1.5rem;
+  margin-bottom: 0.2rem;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-animation: heart-beat 1.5s infinite;
+          animation: heart-beat 1.5s infinite;
+}
+
+.heart::after,
+.heart::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  border-radius: 50%;
+}
+
+.heart::after {
+  left: -7px;
+  border-left: 2px solid rgba(255, 255, 255, 0.75);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.75);
+}
+
+.heart::before {
+  top: -7px;
+  border-left: 2px solid rgba(255, 255, 255, 0.75);
+  border-top: 2px solid rgba(255, 255, 255, 0.75);
+}
+
+.heart:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  background-color: #c5e6e8;
+}
+
+.heart:hover::after,
+.heart:hover::before {
+  background-color: #c5e6e8;
+}
+
+@-webkit-keyframes heart-beat {
+  0% {
+    -webkit-transform: scale(1) rotate(45deg);
+            transform: scale(1) rotate(45deg);
+  }
+  50% {
+    -webkit-transform: scale(0.7) rotate(45deg);
+            transform: scale(0.7) rotate(45deg);
+  }
+}
+
+@keyframes heart-beat {
+  0% {
+    -webkit-transform: scale(1) rotate(45deg);
+            transform: scale(1) rotate(45deg);
+  }
+  50% {
+    -webkit-transform: scale(0.7) rotate(45deg);
+            transform: scale(0.7) rotate(45deg);
+  }
+}
+
+/* setting the common */
+/* setting the logo and navbar */
+header {
+  width: 100%;
+  height: 8rem;
+  -webkit-box-shadow: 0px -2px 25px #006970;
+          box-shadow: 0px -2px 25px #006970;
+}
+
+.logo {
+  width: 5rem;
+  height: 5rem;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 50%;
+  margin: 1.5rem;
+  position: fixed;
+  top: 0rem;
+  outline: 2px solid #006970;
+  outline-offset: 5px;
+  -webkit-box-shadow: 0 0 15px #f2f2f2;
+          box-shadow: 0 0 15px #f2f2f2;
+  z-index: 9;
+}
+
+.fam-name {
+  font-family: "Oleo Script", cursive;
+  font-weight: bolder;
+  font-size: 4.7rem;
+  color: #006970;
+  position: absolute;
+  top: -0.5rem;
+  left: 1.2rem;
+}
+
+.logo::after {
+  content: attr(data-tooltip);
+  display: none;
+  position: absolute;
+  padding: 5px 10px 8px 13px;
+  top: -1.3rem;
+  left: 4.5rem;
+  border-radius: 5px;
+  background-color: #006970;
+  color: rgba(255, 255, 255, 0.75);
+  z-index: 10;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  -webkit-clip-path: polygon(9% 1%, 100% 0%, 100% 90%, 31% 90%, 0 100%, 9% 76%);
+          clip-path: polygon(9% 1%, 100% 0%, 100% 90%, 31% 90%, 0 100%, 9% 76%);
+}
+
+.logo:hover::after {
+  display: block;
+}
+
+.name {
+  font-family: "Oleo Script", cursive;
+  font-weight: bold;
+  color: #e38826;
+  font-size: 5rem;
+  position: absolute;
+  top: -1rem;
+  left: 0.8rem;
+  mix-blend-mode: multiply;
+}
+
+.navi {
+  position: absolute;
+  right: 3rem;
+  top: 2.5rem;
+}
+
+.navi ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navi ul li {
+  list-style-type: none;
+}
+
+.link {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  padding-left: 3rem;
+  font-weight: bold;
+  position: relative;
+}
+
+.link:hover {
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: bold;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  left: 3.1rem;
+  bottom: -5px;
+  width: 5.1rem;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.75);
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: -webkit-transform 250ms ease-in;
+  transition: -webkit-transform 250ms ease-in;
+  transition: transform 250ms ease-in;
+  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
+}
+
+.link:hover::after {
+  -webkit-transform: scaleX(1.2);
+          transform: scaleX(1.2);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* setting the common */
+/* creating MIXIN */
+body {
+  font-family: sans-serif;
+  font-size: 1.6rem;
+  background-color: #004241;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Oleo Script", cursive;
+  letter-spacing: 1.5px;
+}
+
+.para {
+  background-color: #006970;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.hcss {
+  color: #e38826;
+  font-style: italic;
+}
+
+.line-break {
+  margin: auto;
+  width: 50%;
+  height: 3px;
+  -webkit-box-shadow: 0px -2px 25px #006970;
+          box-shadow: 0px -2px 25px #006970;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+.container {
+  width: 120rem;
+  margin: auto;
+}
+
+/* setting the introduce section */
+.intro {
+  width: 100%;
+  height: 50rem;
+  position: relative;
+  margin: 15rem auto;
+}
+
+.intro-self {
+  background-color: #006970;
+  width: 70rem;
+  height: 50rem;
+}
+
+.intro-self img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  border-radius: 10px;
+}
+
+.intro:hover img {
+  opacity: 1;
+}
+
+.intro:hover .intro-text {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
+}
+
+.intro-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  position: absolute;
+  top: 5rem;
+  right: 45rem;
+  width: 60%;
+  height: 38rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 10px;
+  -webkit-box-shadow: 3px 3px 15px #004241;
+          box-shadow: 3px 3px 15px #004241;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
+}
+
+.intro-text h1 {
+  font-family: "Oleo Script", cursive;
+  font-size: 7rem;
+  font-weight: bolder;
+  background: url(../images/IMG_6894.JPG) center/contain;
+  width: 100%;
+  letter-spacing: 5px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.intro-text h2 {
+  font-family: sans-serif;
+  font-style: italic;
+  letter-spacing: normal;
+}
+
+.intro-text p {
+  line-height: 2.2rem;
+}
+
+/* the 3 main projects section */
+.project {
+  margin-left: 1.5rem;
+}
+
+.project img {
+  width: 45rem;
+  height: 25rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.proj-intro {
+  color: rgba(255, 255, 255, 0.75);
+  text-align: center;
+  font-size: 4rem;
+  margin: 8rem 0 13rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: relative;
+}
+
+.proj-intro::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+  position: absolute;
+  top: 4.5rem;
+  left: 0;
+}
+
+.proj-sub img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+  transition: -webkit-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out;
+  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+}
+
+.proj-sub {
+  height: 35rem;
+  width: 55.5rem;
+  outline: 1px solid rgba(255, 255, 255, 0.75);
+  outline-offset: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* setting the hover the image to see the View project text*/
+.proj-sub:hover img {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+  transition: -webkit-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out;
+  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.proj {
+  width: 100%;
+}
+
+.proj .view {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 3rem;
+  font-weight: 600;
+  font-family: "Oleo Script", cursive;
+  opacity: 0;
+  color: #004241;
+  text-shadow: 2px 2px rgba(255, 255, 255, 0.75);
+}
+
+.proj .proj-sub:hover .view {
+  opacity: 1;
+}
+
+.proj .para {
+  width: 55.5rem;
+}
+
+.proj .para h3 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding: 2rem 0 2.5rem;
+}
+
+.vn-intro,
+.asia-text,
+.cuckoo-text,
+.empty {
+  outline: 1px solid #006970;
+  outline-offset: 10px;
+  padding: 2rem;
+  margin-top: 3rem;
+}
+
+.empty {
+  background-color: #006970;
+  width: 7rem;
+  display: none;
+}
+
+/* setting Vietnam and Cuckoo project article  */
+.vietnam,
+.cuckoo {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 0.7fr;
+      grid-template-rows: 1fr 0.7fr;
+}
+
+.vn-intro,
+.cuckoo-text {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+
+:is(.vietnam, .cuckoo) .proj-sub {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+/* setting for Asia market article */
+.asia {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 0.7fr;
+      grid-template-rows: 1fr 0.7fr;
+}
+
+.asia .asia-text {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+
+.asia .proj-sub {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+/* More projects area */
+.more-project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  gap: 2rem;
+  margin-top: 10rem;
+  margin-bottom: 15rem;
+  padding-left: 7rem;
+  /* setting the hover effect for the images */
+  /*setting the more project text and button */
+}
+
+.more-project .para {
+  width: 40rem;
+  height: 60rem;
+  position: relative;
+  border-radius: 10px;
+}
+
+.more-project .para-card {
+  width: 100%;
+  height: 50%;
+  position: relative;
+}
+
+.more-project .para-card::after,
+.more-project .para-card::before {
+  content: "";
+  position: absolute;
+  top: 1.1rem;
+  left: 1.1rem;
+  right: 1.1rem;
+  bottom: 1.1rem;
+}
+
+.more-project .para-card::before {
+  -webkit-transform: scale(0, 1);
+          transform: scale(0, 1);
+  -webkit-transition: -webkit-transform 300ms ease-in-out;
+  transition: -webkit-transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+  border-top: 2px solid #004241;
+  border-bottom: 2px solid #004241;
+  z-index: 9;
+}
+
+.more-project .para-card::after {
+  -webkit-transform: scale(1, 0);
+          transform: scale(1, 0);
+  -webkit-transition: -webkit-transform 500ms ease-in-out;
+  transition: -webkit-transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
+  border-left: 2px solid #004241;
+  border-right: 2px solid #004241;
+}
+
+.more-project .para-card:hover::before {
+  -webkit-transform: scale(1.05, 1);
+          transform: scale(1.05, 1);
+}
+
+.more-project .para-card:hover::after {
+  -webkit-transform: scale(1, 1.05);
+          transform: scale(1, 1.05);
+}
+
+.more-project .para-card:hover img {
+  opacity: 0.7;
+}
+
+.more-project .para-card:hover .view {
+  opacity: 1;
+}
+
+.more-project .para-sub h3 {
+  padding-bottom: 2rem;
+}
+
+.more-project .para-card img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.more-project .para-sub {
+  position: absolute;
+  top: 50%;
+  margin: 0rem 1rem;
+  padding-left: 1rem;
+  line-height: 2.2rem;
+}
+
+.more-project .para-sub p {
+  padding: 1rem 0;
+}
+
+.more-project button a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #004241;
+}
+
+.more-project button {
+  background-color: rgba(255, 255, 255, 0.75);
+  position: absolute;
+  bottom: 4rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  border: none;
+  -webkit-box-shadow: 0 0 10px #004241;
+          box-shadow: 0 0 10px #004241;
+}
+
+.more-project button:hover {
+  background-color: #004241;
+}
+
+.more-project button:hover a {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* setting the contact area */
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 45rem;
+  height: 25rem;
+  margin-top: 20rem;
+  margin-left: 2rem;
+  padding: 4rem 5rem;
+  -webkit-box-shadow: 0px -2px 25px #006970;
+          box-shadow: 0px -2px 25px #006970;
+  border-radius: 10px;
+  line-height: 3rem;
+}
+
+.fa-envelope,
+.fa-github {
+  margin-right: 0.5rem;
+  font-size: 2rem;
+}
+
+.contact h2 {
+  font-family: "Oleo Script", cursive;
+  font-size: 4rem;
+  padding-bottom: 1.5rem;
+}
+
+.contact a {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.contact a:hover {
+  font-weight: bold;
+}
+
+/* setting the responsive screen */
+@media screen and (min-width: 786px) {
+  .intro:hover .intro-text {
+    -webkit-transform: translateX(25%);
+            transform: translateX(25%);
+  }
+  .intro-text {
+    right: 0;
+  }
+  .more-project {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .contact {
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .project {
+    margin-left: 1.5rem;
+  }
+  .empty {
+    display: block;
+  }
+  /* setting responsive Vietnam and Cuckoo project article  */
+  .vietnam,
+  .cuckoo {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 7rem;
+        grid-template-columns: 1fr 1fr 7rem;
+    -ms-grid-rows: 3.5rem 1fr 5rem;
+        grid-template-rows: 3.5rem 1fr 5rem;
+  }
+  .vn-intro,
+  .cuckoo-text {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+  }
+  :is(.vietnam, .cuckoo) .proj-sub {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    grid-row: 1/4;
+  }
+  .empty {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3/4;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+  }
+  /* setting responsive for Asia market article */
+  .asia {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 7rem 1fr 1fr;
+        grid-template-columns: 7rem 1fr 1fr;
+    -ms-grid-rows: 3.5rem 1fr 5rem;
+        grid-template-rows: 3.5rem 1fr 5rem;
+  }
+  .asia .asia-text {
+    padding-left: 3rem;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3/4;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+  }
+  .asia .proj-sub {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    grid-row: 1/4;
+  }
+  .empty {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+  }
+}
+
+footer {
+  width: 100%;
+  height: 7rem;
+  -webkit-box-shadow: 0px -2px 25px #006970;
+          box-shadow: 0px -2px 25px #006970;
+  background-color: #004241;
+  color: rgba(255, 255, 255, 0.75);
+  text-align: end;
+  font-style: italic;
+  padding: 2.5rem;
+  margin-top: 20rem;
+}
+/*# sourceMappingURL=main.css.map */

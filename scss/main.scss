@@ -1,0 +1,513 @@
+@import url("https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&display=swap");
+@import "heart";
+@import "header";
+
+:root {
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* setting the common */
+$clr-very-dark-bg: hsl(179, 100%, 13%);
+$clr-article-bg: hsl(184, 100%, 22%);
+$clr-highlight-color: hsl(31, 77%, 52%);
+$clr-light-text: hsla(0, 0%, 100%, 0.75);
+$clr-border-color: hsl(0, 0%, 95%);
+$clr-heart-color: hsl(183, 43%, 84%);
+
+$border-radius: 10px;
+$text-line-high: 2.2rem;
+
+/* creating MIXIN */
+@mixin con-flex($display, $direction, $justify) {
+  display: $display;
+  flex-direction: $direction;
+  justify-content: $justify;
+}
+
+@mixin card($text, $bg) {
+  background-color: $bg;
+  color: $text;
+}
+
+@mixin image($width, $high, $fit) {
+  width: $width;
+  height: $high;
+  object-fit: $fit;
+}
+
+@mixin size($width, $high) {
+  width: $width;
+  height: $high;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 1.6rem;
+  background-color: $clr-very-dark-bg;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Oleo Script", cursive;
+  letter-spacing: 1.5px;
+}
+
+.para {
+  @include card($clr-light-text, $clr-article-bg);
+}
+
+.hcss {
+  color: $clr-highlight-color;
+  font-style: italic;
+}
+
+.line-break {
+  margin: auto;
+  width: 50%;
+  height: 3px;
+  box-shadow: 0px -2px 25px $clr-article-bg;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+.container {
+  width: 120rem;
+  margin: auto;
+}
+
+/* setting the introduce section */
+.intro {
+  width: 100%;
+  height: 50rem;
+  position: relative;
+  margin: 15rem auto;
+}
+.intro-self {
+  background-color: $clr-article-bg;
+  width: 70rem;
+  height: 50rem;
+}
+
+.intro-self img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  border-radius: $border-radius;
+}
+
+.intro:hover img {
+  opacity: 1;
+}
+
+.intro:hover .intro-text {
+  transform: translateX(100%);
+  transition: transform 1s ease;
+}
+
+.intro-text {
+  @include con-flex(flex, column, space-evenly);
+  position: absolute;
+  top: 5rem;
+  right: 45rem;
+  width: 60%;
+  height: 38rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: $border-radius;
+  box-shadow: 3px 3px 15px $clr-very-dark-bg;
+  transform: translateX(0);
+  transition: transform 1s ease;
+}
+
+.intro-text h1 {
+  font-family: "Oleo Script", cursive;
+  font-size: 7rem;
+  font-weight: bolder;
+  background: url(../images/IMG_6894.JPG) center/contain;
+  width: 100%;
+  letter-spacing: 5px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.intro-text h2 {
+  font-family: sans-serif;
+  font-style: italic;
+  letter-spacing: normal;
+}
+
+.intro-text p {
+  line-height: $text-line-high;
+}
+
+/* the 3 main projects section */
+.project {
+  margin-left: 1.5rem;
+}
+.project img {
+  @include image(45rem, 25rem, cover);
+}
+
+.proj-intro {
+  color: $clr-light-text;
+  text-align: center;
+  font-size: 4rem;
+  margin: 8rem 0 13rem;
+  width: max-content;
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+}
+
+.proj-intro::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+  position: absolute;
+  top: 4.5rem;
+  left: 0;
+}
+
+.proj-sub img {
+  @include image(100%, 100%, cover);
+  transform: scale(1);
+  transition: transform 1s ease-in-out;
+}
+
+.proj-sub {
+  height: 35rem;
+  width: 55.5rem;
+  outline: 1px solid $clr-light-text;
+  outline-offset: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* setting the hover the image to see the View project text*/
+.proj-sub:hover img {
+  transform: scale(1.5);
+  transition: transform 1s ease-in-out;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.proj {
+  width: 100%;
+
+  .view {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: "Oleo Script", cursive;
+    opacity: 0;
+    color: $clr-very-dark-bg;
+    text-shadow: 2px 2px $clr-light-text;
+  }
+
+  .proj-sub:hover .view {
+    opacity: 1;
+  }
+
+  .para {
+    width: 55.5rem;
+  }
+
+  .para h3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding: 2rem 0 2.5rem;
+  }
+}
+.vn-intro,
+.asia-text,
+.cuckoo-text,
+.empty {
+  outline: 1px solid $clr-article-bg;
+  outline-offset: 10px;
+  padding: 2rem;
+  margin-top: 3rem;
+}
+.empty {
+  background-color: $clr-article-bg;
+  width: 7rem;
+  display: none;
+}
+
+/* setting Vietnam and Cuckoo project article  */
+.vietnam,
+.cuckoo {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 0.7fr;
+}
+
+.vn-intro,
+.cuckoo-text {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+:is(.vietnam, .cuckoo) .proj-sub {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+/* setting for Asia market article */
+.asia {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 0.7fr;
+}
+
+.asia .asia-text {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+.asia .proj-sub {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+/* More projects area */
+.more-project {
+  @include con-flex(flex, column, space-evenly);
+  gap: 2rem;
+  margin-top: 10rem;
+  margin-bottom: 15rem;
+  padding-left: 7rem;
+
+  .para {
+    @include size(40rem, 60rem);
+    position: relative;
+    border-radius: $border-radius;
+  }
+
+  /* setting the hover effect for the images */
+  .para-card {
+    width: 100%;
+    height: 50%;
+    position: relative;
+  }
+
+  .para-card::after,
+  .para-card::before {
+    content: "";
+    position: absolute;
+    top: 1.1rem;
+    left: 1.1rem;
+    right: 1.1rem;
+    bottom: 1.1rem;
+  }
+
+  .para-card::before {
+    transform: scale(0, 1);
+    transition: transform 300ms ease-in-out;
+    border-top: 2px solid $clr-very-dark-bg;
+    border-bottom: 2px solid $clr-very-dark-bg;
+    z-index: 9;
+  }
+
+  .para-card::after {
+    transform: scale(1, 0);
+    transition: transform 500ms ease-in-out;
+    border-left: 2px solid $clr-very-dark-bg;
+    border-right: 2px solid $clr-very-dark-bg;
+  }
+
+  .para-card:hover::before {
+    transform: scale(1.05, 1);
+  }
+
+  .para-card:hover::after {
+    transform: scale(1, 1.05);
+  }
+
+  .para-card:hover img {
+    opacity: 0.7;
+  }
+
+  .para-card:hover .view {
+    opacity: 1;
+  }
+
+  .para-sub h3 {
+    padding-bottom: 2rem;
+  }
+
+  .para-card img {
+    @include image(100%, 100%, cover);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2rem;
+    border-radius: $border-radius;
+  }
+  /*setting the more project text and button */
+  .para-sub {
+    position: absolute;
+    top: 50%;
+    margin: 0rem 1rem;
+    padding-left: 1rem;
+    line-height: $text-line-high;
+  }
+
+  .para-sub p {
+    padding: 1rem 0;
+  }
+
+  button a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $clr-very-dark-bg;
+  }
+
+  button {
+    background-color: $clr-light-text;
+    position: absolute;
+    bottom: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1rem 2rem;
+    border-radius: $border-radius;
+    border: none;
+    box-shadow: 0 0 10px $clr-very-dark-bg;
+  }
+
+  button:hover {
+    background-color: $clr-very-dark-bg;
+  }
+
+  button:hover a {
+    color: $clr-light-text;
+  }
+}
+
+/* setting the contact area */
+.contact {
+  @include con-flex(flex, column, space-around);
+  width: 45rem;
+  height: 25rem;
+  margin-top: 20rem;
+  margin-left: 2rem;
+  padding: 4rem 5rem;
+  box-shadow: 0px -2px 25px $clr-article-bg;
+  border-radius: $border-radius;
+  line-height: 3rem;
+}
+
+.fa-envelope,
+.fa-github {
+  margin-right: 0.5rem;
+  font-size: 2rem;
+}
+
+.contact h2 {
+  font-family: "Oleo Script", cursive;
+  font-size: 4rem;
+  padding-bottom: 1.5rem;
+}
+
+.contact a {
+  color: $clr-light-text;
+}
+
+.contact a:hover {
+  font-weight: bold;
+}
+
+/* setting the responsive screen */
+@media screen and (min-width: 786px) {
+  .intro:hover .intro-text {
+    transform: translateX(25%);
+  }
+  .intro-text {
+    right: 0;
+  }
+
+  .more-project {
+    flex-direction: row;
+  }
+  .contact {
+    margin: auto;
+  }
+}
+@media screen and (min-width: 900px) {
+  .project {
+    margin-left: 1.5rem;
+  }
+  .empty {
+    display: block;
+  }
+
+  /* setting responsive Vietnam and Cuckoo project article  */
+  .vietnam,
+  .cuckoo {
+    display: grid;
+    grid-template-columns: 1fr 1fr 7rem;
+    grid-template-rows: 3.5rem 1fr 5rem;
+  }
+
+  .vn-intro,
+  .cuckoo-text {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  :is(.vietnam, .cuckoo) .proj-sub {
+    grid-column: 2/3;
+    grid-row: 1/4;
+  }
+  .empty {
+    grid-column: 3/4;
+    grid-row: 2/3;
+  }
+
+  /* setting responsive for Asia market article */
+  .asia {
+    display: grid;
+    grid-template-columns: 7rem 1fr 1fr;
+    grid-template-rows: 3.5rem 1fr 5rem;
+  }
+
+  .asia .asia-text {
+    padding-left: 3rem;
+    grid-column: 3/4;
+    grid-row: 2/3;
+  }
+
+  .asia .proj-sub {
+    grid-column: 2/3;
+    grid-row: 1/4;
+  }
+
+  .empty {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+}
+
+footer {
+  width: 100%;
+  height: 7rem;
+  box-shadow: 0px -2px 25px $clr-article-bg;
+  @include card($clr-light-text, $clr-very-dark-bg);
+  text-align: end;
+  font-style: italic;
+  padding: 2.5rem;
+  margin-top: 20rem;
+}
