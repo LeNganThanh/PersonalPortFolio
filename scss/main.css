@@ -725,8 +725,8 @@ h3 {
     display: grid;
     -ms-grid-columns: 1fr 1fr 7rem;
         grid-template-columns: 1fr 1fr 7rem;
-    -ms-grid-rows: 3.5rem 1fr 5rem;
-        grid-template-rows: 3.5rem 1fr 5rem;
+    -ms-grid-rows: 3rem 1fr 5rem;
+        grid-template-rows: 3rem 1fr 5rem;
   }
   .vn-intro,
   .cuckoo-text {
@@ -745,7 +745,7 @@ h3 {
     -ms-grid-row-span: 3;
     grid-row: 1/4;
   }
-  .empty {
+  :is(.vietnam, .cuckoo) .empty {
     -ms-grid-column: 3;
     -ms-grid-column-span: 1;
     grid-column: 3/4;
@@ -759,8 +759,8 @@ h3 {
     display: grid;
     -ms-grid-columns: 7rem 1fr 1fr;
         grid-template-columns: 7rem 1fr 1fr;
-    -ms-grid-rows: 3.5rem 1fr 5rem;
-        grid-template-rows: 3.5rem 1fr 5rem;
+    -ms-grid-rows: 3rem 1fr 5rem;
+        grid-template-rows: 3rem 1fr 5rem;
   }
   .asia .asia-text {
     padding-left: 3rem;

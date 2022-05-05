@@ -459,7 +459,7 @@ h3 {
   .cuckoo {
     display: grid;
     grid-template-columns: 1fr 1fr 7rem;
-    grid-template-rows: 3.5rem 1fr 5rem;
+    grid-template-rows: 3rem 1fr 5rem;
   }
 
   .vn-intro,
@@ -468,20 +468,21 @@ h3 {
     grid-row: 2/3;
   }
 
-  :is(.vietnam, .cuckoo) .proj-sub {
-    grid-column: 2/3;
-    grid-row: 1/4;
+  :is(.vietnam, .cuckoo) {
+    .proj-sub {
+      grid-column: 2/3;
+      grid-row: 1/4;
+    }
+    .empty {
+      grid-column: 3/4;
+      grid-row: 2/3;
+    }
   }
-  .empty {
-    grid-column: 3/4;
-    grid-row: 2/3;
-  }
-
   /* setting responsive for Asia market article */
   .asia {
     display: grid;
     grid-template-columns: 7rem 1fr 1fr;
-    grid-template-rows: 3.5rem 1fr 5rem;
+    grid-template-rows: 3rem 1fr 5rem;
   }
 
   .asia .asia-text {
