@@ -94,7 +94,7 @@ header {
 
 /* the 3 main projects section */
 .project img {
-  @include image(45rem, 25rem, cover);
+  @include image(35rem, 20rem, cover);
 }
 
 .proj-intro {
@@ -171,6 +171,7 @@ header {
     padding: 2rem 0 2.5rem;
   }
 }
+/* setting an empty box and design outline for boxes */
 .vn-intro,
 .asia-text,
 .cuckoo-text,
