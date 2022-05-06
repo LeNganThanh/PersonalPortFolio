@@ -1,0 +1,70 @@
+/* setting the common */
+$clr-very-dark-bg: hsl(179, 100%, 13%);
+$clr-article-bg: hsl(184, 100%, 22%);
+$clr-highlight-color: hsl(31, 77%, 52%);
+$clr-light-text: hsla(0, 0%, 100%, 0.75);
+$clr-border-color: hsl(0, 0%, 95%);
+$clr-heart-color: hsl(183, 43%, 84%);
+
+$clr-gradient: linear-gradient(
+  to top,
+  $clr-very-dark-bg,
+  $clr-article-bg,
+  $clr-border-color,
+  $clr-light-text
+);
+
+$border-radius: 10px;
+$text-line-high: 2.2rem;
+
+.logo {
+  width: 5rem;
+  height: 5rem;
+  background-color: $clr-light-text;
+  border-radius: 50%;
+  margin: 1.5rem;
+  position: fixed;
+  top: 0rem;
+  outline: 2px solid $clr-article-bg;
+  outline-offset: 5px;
+  box-shadow: 0 0 15px $clr-border-color;
+  z-index: 9;
+}
+.fam-name {
+  font-family: "Oleo Script", cursive;
+  font-weight: bolder;
+  font-size: 4.7rem;
+  color: $clr-article-bg;
+  position: absolute;
+  top: -0.5rem;
+  left: 1.2rem;
+}
+.logo::after {
+  content: attr(data-tooltip);
+  display: none;
+  position: absolute;
+  padding: 5px 10px 8px 13px;
+  top: -1.3rem;
+  left: 4.5rem;
+  border-radius: 5px;
+  background-color: $clr-article-bg;
+  color: $clr-light-text;
+  z-index: 10;
+  width: max-content;
+  border: 1px solid $clr-light-text;
+  clip-path: polygon(9% 1%, 100% 0%, 100% 90%, 31% 90%, 0 100%, 9% 76%);
+}
+.logo:hover::after {
+  display: block;
+}
+.name {
+  font-family: "Oleo Script", cursive;
+
+  font-weight: bold;
+  color: $clr-highlight-color;
+  font-size: 5rem;
+  position: absolute;
+  top: -1rem;
+  left: 0.8rem;
+  mix-blend-mode: multiply;
+}

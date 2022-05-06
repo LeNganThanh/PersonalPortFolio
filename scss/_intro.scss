@@ -1,0 +1,82 @@
+/* setting the common */
+$clr-very-dark-bg: hsl(179, 100%, 13%);
+$clr-article-bg: hsl(184, 100%, 22%);
+$clr-highlight-color: hsl(31, 77%, 52%);
+$clr-light-text: hsla(0, 0%, 100%, 0.75);
+$clr-border-color: hsl(0, 0%, 95%);
+$clr-heart-color: hsl(183, 43%, 84%);
+
+$border-radius: 10px;
+$text-line-high: 2.2rem;
+
+/* creating MIXIN */
+@mixin con-flex($display, $direction, $justify) {
+  display: $display;
+  flex-direction: $direction;
+  justify-content: $justify;
+}
+
+/* setting the introduce section */
+.intro {
+  width: 100%;
+  height: 50rem;
+  position: relative;
+  margin: 15rem auto;
+}
+.intro-self {
+  background-color: $clr-article-bg;
+  width: 70rem;
+  height: 50rem;
+}
+
+.intro-self img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  border-radius: $border-radius;
+}
+
+.intro:hover img {
+  opacity: 1;
+}
+
+.intro:hover .intro-text {
+  transform: translateX(100%);
+  transition: transform 1s ease;
+}
+
+.intro-text {
+  @include con-flex(flex, column, space-evenly);
+  position: absolute;
+  top: 5rem;
+  right: 0;
+  width: 60%;
+  height: 38rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: $border-radius;
+  box-shadow: 3px 3px 15px $clr-very-dark-bg;
+  transform: translateX(0);
+  transition: transform 1s ease;
+}
+
+.intro-text h1 {
+  font-family: "Oleo Script", cursive;
+  font-size: 7rem;
+  font-weight: bolder;
+  background: url(../images/IMG_6894.JPG) center/contain;
+  width: 100%;
+  letter-spacing: 5px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.intro-text h2 {
+  font-family: sans-serif;
+  font-style: italic;
+  letter-spacing: normal;
+}
+
+.intro-text p {
+  line-height: $text-line-high;
+}

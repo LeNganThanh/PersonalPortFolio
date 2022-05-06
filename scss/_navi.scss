@@ -1,0 +1,59 @@
+/* setting the common */
+$clr-very-dark-bg: hsl(179, 100%, 13%);
+$clr-article-bg: hsl(184, 100%, 22%);
+$clr-highlight-color: hsl(31, 77%, 52%);
+$clr-light-text: hsla(0, 0%, 100%, 0.75);
+$clr-border-color: hsl(0, 0%, 95%);
+$clr-heart-color: hsl(183, 43%, 84%);
+
+$clr-gradient: linear-gradient(
+  to top,
+  $clr-very-dark-bg,
+  $clr-article-bg,
+  $clr-border-color,
+  $clr-light-text
+);
+
+$border-radius: 10px;
+$text-line-high: 2.2rem;
+
+/* setting the navbar */
+
+.navi {
+  position: absolute;
+  right: 3rem;
+  top: 2.5rem;
+  ul {
+    display: flex;
+  }
+  ul li {
+    list-style-type: none;
+  }
+}
+.link {
+  color: $clr-light-text;
+  text-decoration: none;
+  padding-left: 3rem;
+  font-weight: bold;
+  position: relative;
+}
+.link:hover {
+  color: $clr-light-text;
+  font-weight: bold;
+}
+.link::after {
+  content: "";
+  position: absolute;
+  left: 3.1rem;
+  bottom: -5px;
+  width: 5.1rem;
+  height: 2px;
+  background-color: $clr-light-text;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 250ms ease-in;
+}
+.link:hover::after {
+  transform: scaleX(1.2);
+  transform-origin: left;
+}

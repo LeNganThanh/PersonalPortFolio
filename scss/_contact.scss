@@ -1,0 +1,49 @@
+/* setting the common */
+$clr-very-dark-bg: hsl(179, 100%, 13%);
+$clr-article-bg: hsl(184, 100%, 22%);
+$clr-highlight-color: hsl(31, 77%, 52%);
+$clr-light-text: hsla(0, 0%, 100%, 0.75);
+$clr-border-color: hsl(0, 0%, 95%);
+$clr-heart-color: hsl(183, 43%, 84%);
+
+$border-radius: 10px;
+$text-line-high: 2.2rem;
+
+/* creating MIXIN */
+@mixin con-flex($display, $direction, $justify) {
+  display: $display;
+  flex-direction: $direction;
+  justify-content: $justify;
+}
+
+/* setting the contact area */
+.contact {
+  @include con-flex(flex, column, space-around);
+  width: 45rem;
+  height: 25rem;
+  margin-top: 20rem;
+  padding: 4rem 5rem;
+  box-shadow: 0px -2px 25px $clr-article-bg;
+  border-radius: $border-radius;
+  line-height: 3rem;
+
+  .fa-envelope,
+  .fa-github {
+    margin-right: 0.5rem;
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-family: "Oleo Script", cursive;
+    font-size: 4rem;
+    padding-bottom: 1.5rem;
+  }
+
+  a {
+    color: $clr-light-text;
+  }
+
+  a:hover {
+    font-weight: bold;
+  }
+}
