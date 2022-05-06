@@ -195,6 +195,49 @@ header {
           transform-origin: left;
 }
 
+/* setting the common */
+/* creating MIXIN */
+/* setting the contact area */
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 45rem;
+  height: 25rem;
+  margin-top: 20rem;
+  padding: 4rem 5rem;
+  -webkit-box-shadow: 0px -2px 25px #006970;
+          box-shadow: 0px -2px 25px #006970;
+  border-radius: 10px;
+  line-height: 3rem;
+}
+
+.contact .fa-envelope,
+.contact .fa-github {
+  margin-right: 0.5rem;
+  font-size: 2rem;
+}
+
+.contact h2 {
+  font-family: "Oleo Script", cursive;
+  font-size: 4rem;
+  padding-bottom: 1.5rem;
+}
+
+.contact a {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.contact a:hover {
+  font-weight: bold;
+}
+
 :root {
   font-size: 62.5%;
 }
@@ -648,46 +691,37 @@ h3 {
 }
 
 /* setting the contact area */
-.contact {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+/* .contact {
+  @include con-flex(flex, column, space-around);
   width: 45rem;
   height: 25rem;
   margin-top: 20rem;
   padding: 4rem 5rem;
-  -webkit-box-shadow: 0px -2px 25px #006970;
-          box-shadow: 0px -2px 25px #006970;
-  border-radius: 10px;
+  box-shadow: 0px -2px 25px $clr-article-bg;
+  border-radius: $border-radius;
   line-height: 3rem;
-}
 
-.contact .fa-envelope,
-.contact .fa-github {
-  margin-right: 0.5rem;
-  font-size: 2rem;
-}
+  .fa-envelope,
+  .fa-github {
+    margin-right: 0.5rem;
+    font-size: 2rem;
+  }
 
-.contact h2 {
-  font-family: "Oleo Script", cursive;
-  font-size: 4rem;
-  padding-bottom: 1.5rem;
-}
+  h2 {
+    font-family: "Oleo Script", cursive;
+    font-size: 4rem;
+    padding-bottom: 1.5rem;
+  }
 
-.contact a {
-  color: rgba(255, 255, 255, 0.75);
-}
+  a {
+    color: $clr-light-text;
+  }
 
-.contact a:hover {
-  font-weight: bold;
+  a:hover {
+    font-weight: bold;
+  }
 }
-
+ */
 /* setting the responsive screen */
 @media screen and (min-width: 786px) {
   .project {

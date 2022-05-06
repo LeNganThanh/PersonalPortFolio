@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&display=swap");
 @import "heart";
 @import "header";
+@import "contact";
 
 :root {
   font-size: 62.5%;
@@ -400,7 +401,7 @@ h3 {
 }
 
 /* setting the contact area */
-.contact {
+/* .contact {
   @include con-flex(flex, column, space-around);
   width: 45rem;
   height: 25rem;
@@ -430,7 +431,7 @@ h3 {
     font-weight: bold;
   }
 }
-/* setting the responsive screen */
+ */ /* setting the responsive screen */
 @include media(786px) {
   .project {
     margin-left: 10rem;
