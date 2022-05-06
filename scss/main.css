@@ -429,17 +429,6 @@ header {
 }
 
 /* setting the hover the image to see the View project text*/
-.proj-sub:hover img {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
-  -webkit-transition: -webkit-transform 1s ease-in-out;
-  transition: -webkit-transform 1s ease-in-out;
-  transition: transform 1s ease-in-out;
-  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
-  cursor: pointer;
-  opacity: 0.7;
-}
-
 .proj {
   width: 100%;
 }
@@ -456,6 +445,17 @@ header {
   opacity: 0;
   color: #004241;
   text-shadow: 2px 2px rgba(255, 255, 255, 0.75);
+}
+
+.proj .proj-sub:hover img {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+  transition: -webkit-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out;
+  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+  cursor: pointer;
+  opacity: 0.7;
 }
 
 .proj .proj-sub:hover .view {

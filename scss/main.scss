@@ -134,12 +134,6 @@ header {
 }
 
 /* setting the hover the image to see the View project text*/
-.proj-sub:hover img {
-  transform: scale(1.5);
-  transition: transform 1s ease-in-out;
-  cursor: pointer;
-  opacity: 0.7;
-}
 
 .proj {
   width: 100%;
@@ -155,6 +149,12 @@ header {
     opacity: 0;
     color: $clr-very-dark-bg;
     text-shadow: 2px 2px $clr-light-text;
+  }
+  .proj-sub:hover img {
+    transform: scale(1.5);
+    transition: transform 1s ease-in-out;
+    cursor: pointer;
+    opacity: 0.7;
   }
 
   .proj-sub:hover .view {
