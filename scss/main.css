@@ -1,87 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&display=swap");
 /* setting the common */
-/* a heart beating */
-.heart {
-  display: inline-block;
-  width: 14px;
-  height: 14px;
-  border-right: 2px solid rgba(255, 255, 255, 0.75);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.75);
-  position: relative;
-  margin-left: 1.5rem;
-  margin-bottom: 0.2rem;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  -webkit-animation: heart-beat 1.5s infinite;
-          animation: heart-beat 1.5s infinite;
-}
-
-.heart::after,
-.heart::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 14px;
-  height: 14px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  border-radius: 50%;
-}
-
-.heart::after {
-  left: -7px;
-  border-left: 2px solid rgba(255, 255, 255, 0.75);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.75);
-}
-
-.heart::before {
-  top: -7px;
-  border-left: 2px solid rgba(255, 255, 255, 0.75);
-  border-top: 2px solid rgba(255, 255, 255, 0.75);
-}
-
-.heart:hover {
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
-  background-color: #c5e6e8;
-}
-
-.heart:hover::after,
-.heart:hover::before {
-  background-color: #c5e6e8;
-}
-
-@-webkit-keyframes heart-beat {
-  0% {
-    -webkit-transform: scale(1) rotate(45deg);
-            transform: scale(1) rotate(45deg);
-  }
-  50% {
-    -webkit-transform: scale(0.7) rotate(45deg);
-            transform: scale(0.7) rotate(45deg);
-  }
-}
-
-@keyframes heart-beat {
-  0% {
-    -webkit-transform: scale(1) rotate(45deg);
-            transform: scale(1) rotate(45deg);
-  }
-  50% {
-    -webkit-transform: scale(0.7) rotate(45deg);
-            transform: scale(0.7) rotate(45deg);
-  }
-}
-
-/* setting the common */
-/* setting the logo and navbar */
-header {
-  width: 100%;
-  height: 8rem;
-  -webkit-box-shadow: 0px -2px 25px #006970;
-          box-shadow: 0px -2px 25px #006970;
-}
-
 .logo {
   width: 5rem;
   height: 5rem;
@@ -141,6 +59,8 @@ header {
   mix-blend-mode: multiply;
 }
 
+/* setting the common */
+/* setting the navbar */
 .navi {
   position: absolute;
   right: 3rem;
@@ -197,100 +117,6 @@ header {
 
 /* setting the common */
 /* creating MIXIN */
-/* setting the contact area */
-.contact {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  width: 45rem;
-  height: 25rem;
-  margin-top: 20rem;
-  padding: 4rem 5rem;
-  -webkit-box-shadow: 0px -2px 25px #006970;
-          box-shadow: 0px -2px 25px #006970;
-  border-radius: 10px;
-  line-height: 3rem;
-}
-
-.contact .fa-envelope,
-.contact .fa-github {
-  margin-right: 0.5rem;
-  font-size: 2rem;
-}
-
-.contact h2 {
-  font-family: "Oleo Script", cursive;
-  font-size: 4rem;
-  padding-bottom: 1.5rem;
-}
-
-.contact a {
-  color: rgba(255, 255, 255, 0.75);
-}
-
-.contact a:hover {
-  font-weight: bold;
-}
-
-:root {
-  font-size: 62.5%;
-}
-
-*,
-*::after,
-*::before {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-/* setting the common */
-/* creating MIXIN */
-body {
-  font-family: sans-serif;
-  font-size: 1.6rem;
-  background-color: #004241;
-}
-
-h1,
-h2,
-h3 {
-  font-family: "Oleo Script", cursive;
-  letter-spacing: 1.5px;
-}
-
-.para {
-  background-color: #006970;
-  color: rgba(255, 255, 255, 0.75);
-}
-
-.hcss {
-  color: #e38826;
-  font-style: italic;
-}
-
-.line-break {
-  margin: auto;
-  width: 50%;
-  height: 3px;
-  -webkit-box-shadow: 0px -2px 25px #006970;
-          box-shadow: 0px -2px 25px #006970;
-  margin-top: 10rem;
-  margin-bottom: 10rem;
-}
-
-/* .container {
-  width: 120rem;
-}
-
- */
 /* setting the introduce section */
 .intro {
   width: 100%;
@@ -373,6 +199,178 @@ h3 {
 
 .intro-text p {
   line-height: 2.2rem;
+}
+
+/* setting the common */
+/* creating MIXIN */
+/* setting the contact area */
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 45rem;
+  height: 25rem;
+  margin-top: 20rem;
+  padding: 4rem 5rem;
+  -webkit-box-shadow: 0px -2px 25px #006970;
+          box-shadow: 0px -2px 25px #006970;
+  border-radius: 10px;
+  line-height: 3rem;
+}
+
+.contact .fa-envelope,
+.contact .fa-github {
+  margin-right: 0.5rem;
+  font-size: 2rem;
+}
+
+.contact h2 {
+  font-family: "Oleo Script", cursive;
+  font-size: 4rem;
+  padding-bottom: 1.5rem;
+}
+
+.contact a {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.contact a:hover {
+  font-weight: bold;
+}
+
+/* setting the common */
+/* a heart beating */
+.heart {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.75);
+  position: relative;
+  margin-left: 1.5rem;
+  margin-bottom: 0.2rem;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-animation: heart-beat 1.5s infinite;
+          animation: heart-beat 1.5s infinite;
+}
+
+.heart::after,
+.heart::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  border-radius: 50%;
+}
+
+.heart::after {
+  left: -7px;
+  border-left: 2px solid rgba(255, 255, 255, 0.75);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.75);
+}
+
+.heart::before {
+  top: -7px;
+  border-left: 2px solid rgba(255, 255, 255, 0.75);
+  border-top: 2px solid rgba(255, 255, 255, 0.75);
+}
+
+.heart:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  background-color: #c5e6e8;
+}
+
+.heart:hover::after,
+.heart:hover::before {
+  background-color: #c5e6e8;
+}
+
+@-webkit-keyframes heart-beat {
+  0% {
+    -webkit-transform: scale(1) rotate(45deg);
+            transform: scale(1) rotate(45deg);
+  }
+  50% {
+    -webkit-transform: scale(0.7) rotate(45deg);
+            transform: scale(0.7) rotate(45deg);
+  }
+}
+
+@keyframes heart-beat {
+  0% {
+    -webkit-transform: scale(1) rotate(45deg);
+            transform: scale(1) rotate(45deg);
+  }
+  50% {
+    -webkit-transform: scale(0.7) rotate(45deg);
+            transform: scale(0.7) rotate(45deg);
+  }
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* setting the common */
+/* creating MIXIN */
+body {
+  font-family: sans-serif;
+  font-size: 1.6rem;
+  background-color: #004241;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Oleo Script", cursive;
+  letter-spacing: 1.5px;
+}
+
+header {
+  width: 100%;
+  height: 8rem;
+  -webkit-box-shadow: 0px -2px 25px #006970;
+          box-shadow: 0px -2px 25px #006970;
+}
+
+.para {
+  background-color: #006970;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.hcss {
+  color: #e38826;
+  font-style: italic;
+}
+
+.line-break {
+  margin: auto;
+  width: 50%;
+  height: 3px;
+  -webkit-box-shadow: 0px -2px 25px #006970;
+          box-shadow: 0px -2px 25px #006970;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
 }
 
 /* the 3 main projects section */
@@ -690,38 +688,6 @@ h3 {
   color: rgba(255, 255, 255, 0.75);
 }
 
-/* setting the contact area */
-/* .contact {
-  @include con-flex(flex, column, space-around);
-  width: 45rem;
-  height: 25rem;
-  margin-top: 20rem;
-  padding: 4rem 5rem;
-  box-shadow: 0px -2px 25px $clr-article-bg;
-  border-radius: $border-radius;
-  line-height: 3rem;
-
-  .fa-envelope,
-  .fa-github {
-    margin-right: 0.5rem;
-    font-size: 2rem;
-  }
-
-  h2 {
-    font-family: "Oleo Script", cursive;
-    font-size: 4rem;
-    padding-bottom: 1.5rem;
-  }
-
-  a {
-    color: $clr-light-text;
-  }
-
-  a:hover {
-    font-weight: bold;
-  }
-}
- */
 /* setting the responsive screen */
 @media screen and (min-width: 786px) {
   .project {
