@@ -47,6 +47,11 @@ $text-line-high: 2.2rem;
   width: $width;
   height: $high;
 }
+@mixin media($size) {
+  @media screen and (min-width: $size) {
+    @content;
+  }
+}
 
 body {
   font-family: sans-serif;
@@ -426,7 +431,7 @@ h3 {
   }
 }
 /* setting the responsive screen */
-@media screen and (min-width: 786px) {
+@include media(786px) {
   .project {
     margin-left: 10rem;
   }
@@ -488,7 +493,7 @@ h3 {
     margin: 20rem auto;
   }
 }
-@media screen and (min-width: 900px) {
+@include media(900px) {
   .intro:hover .intro-text {
     transform: translateX(25%);
   }
