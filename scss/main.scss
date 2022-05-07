@@ -234,6 +234,7 @@ header {
 
   .para {
     @include size(40rem, 60rem);
+    min-width: 30rem;
     position: relative;
     border-radius: $border-radius;
   }
@@ -340,9 +341,21 @@ header {
 }
 
 /* setting the responsive screen */
+@include media(465px) {
+  .intro:hover .intro-text {
+    transform: translateX(100%);
+  }
+
+  .contact {
+    margin: 20rem auto;
+  }
+  .more-project .para:last-of-type {
+    display: none;
+  }
+}
 @include media(786px) {
-  .project {
-    margin-left: 10rem;
+  .more-project {
+    padding-left: 0;
   }
   .empty {
     display: block;
@@ -398,13 +411,13 @@ header {
   .more-project {
     flex-direction: row;
   }
-  .contact {
-    margin: 20rem auto;
-  }
 }
 @include media(900px) {
   .intro:hover .intro-text {
     transform: translateX(25%);
+  }
+  .more-project .para:last-of-type {
+    display: block;
   }
 }
 

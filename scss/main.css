@@ -571,6 +571,7 @@ header {
 .more-project .para {
   width: 40rem;
   height: 60rem;
+  min-width: 30rem;
   position: relative;
   border-radius: 10px;
 }
@@ -691,9 +692,22 @@ header {
 }
 
 /* setting the responsive screen */
+@media screen and (min-width: 465px) {
+  .intro:hover .intro-text {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  .contact {
+    margin: 20rem auto;
+  }
+  .more-project .para:last-of-type {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 786px) {
-  .project {
-    margin-left: 10rem;
+  .more-project {
+    padding-left: 0;
   }
   .empty {
     display: block;
@@ -773,15 +787,15 @@ header {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .contact {
-    margin: 20rem auto;
-  }
 }
 
 @media screen and (min-width: 900px) {
   .intro:hover .intro-text {
     -webkit-transform: translateX(25%);
             transform: translateX(25%);
+  }
+  .more-project .para:last-of-type {
+    display: block;
   }
 }
 
