@@ -96,6 +96,9 @@ header {
 .project img {
   @include image(35rem, 20rem, cover);
 }
+.project {
+  max-width: 100%;
+}
 
 .proj-intro {
   color: $clr-light-text;
@@ -338,6 +341,9 @@ header {
   button:hover a {
     color: $clr-light-text;
   }
+  .para:last-of-type {
+    display: block;
+  }
 }
 
 /* setting the responsive screen */
@@ -349,23 +355,26 @@ header {
   .contact {
     margin: 20rem auto;
   }
-  .more-project .para:last-of-type {
-    display: none;
-  }
 }
 @include media(786px) {
   .more-project {
     padding-left: 0;
+    .para:last-of-type {
+      display: none;
+    }
   }
   .empty {
     display: block;
   }
 
   /* setting responsive Vietnam and Cuckoo project article  */
+  .project {
+    margin-left: 5rem;
+  }
   .vietnam,
   .cuckoo {
     display: grid;
-    grid-template-columns: 1.5fr 1fr 18rem;
+    grid-template-columns: 1.7fr 1.1fr 18rem;
     grid-template-rows: 3rem 1fr 5rem;
   }
 

@@ -382,6 +382,10 @@ header {
      object-fit: cover;
 }
 
+.project {
+  max-width: 100%;
+}
+
 .proj-intro {
   color: rgba(255, 255, 255, 0.75);
   text-align: center;
@@ -691,6 +695,10 @@ header {
   color: rgba(255, 255, 255, 0.75);
 }
 
+.more-project .para:last-of-type {
+  display: block;
+}
+
 /* setting the responsive screen */
 @media screen and (min-width: 465px) {
   .intro:hover .intro-text {
@@ -700,25 +708,28 @@ header {
   .contact {
     margin: 20rem auto;
   }
-  .more-project .para:last-of-type {
-    display: none;
-  }
 }
 
 @media screen and (min-width: 786px) {
   .more-project {
     padding-left: 0;
   }
+  .more-project .para:last-of-type {
+    display: none;
+  }
   .empty {
     display: block;
   }
   /* setting responsive Vietnam and Cuckoo project article  */
+  .project {
+    margin-left: 5rem;
+  }
   .vietnam,
   .cuckoo {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1.5fr 1fr 18rem;
-        grid-template-columns: 1.5fr 1fr 18rem;
+    -ms-grid-columns: 1.7fr 1.1fr 18rem;
+        grid-template-columns: 1.7fr 1.1fr 18rem;
     -ms-grid-rows: 3rem 1fr 5rem;
         grid-template-rows: 3rem 1fr 5rem;
   }
