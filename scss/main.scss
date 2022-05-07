@@ -414,10 +414,15 @@ header {
 }
 @include media(900px) {
   .intro:hover .intro-text {
-    transform: translateX(25%);
+    transform: translateX(45%);
   }
   .more-project .para:last-of-type {
     display: block;
+  }
+}
+@include media(1000px) {
+  .intro:hover .intro-text {
+    transform: translateX(25%);
   }
 }
 

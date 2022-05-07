@@ -791,11 +791,18 @@ header {
 
 @media screen and (min-width: 900px) {
   .intro:hover .intro-text {
-    -webkit-transform: translateX(25%);
-            transform: translateX(25%);
+    -webkit-transform: translateX(45%);
+            transform: translateX(45%);
   }
   .more-project .para:last-of-type {
     display: block;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .intro:hover .intro-text {
+    -webkit-transform: translateX(25%);
+            transform: translateX(25%);
   }
 }
 
