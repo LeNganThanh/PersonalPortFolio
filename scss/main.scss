@@ -363,6 +363,11 @@ header {
       display: none;
     }
   }
+}
+@include media(900px) {
+  .intro:hover .intro-text {
+    transform: translateX(45%);
+  }
   .empty {
     display: block;
   }
@@ -419,14 +424,9 @@ header {
 
   .more-project {
     flex-direction: row;
-  }
-}
-@include media(900px) {
-  .intro:hover .intro-text {
-    transform: translateX(45%);
-  }
-  .more-project .para:last-of-type {
-    display: block;
+    .para:last-of-type {
+      display: block;
+    }
   }
 }
 @include media(1000px) {

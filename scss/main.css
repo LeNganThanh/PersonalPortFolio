@@ -717,6 +717,13 @@ header {
   .more-project .para:last-of-type {
     display: none;
   }
+}
+
+@media screen and (min-width: 900px) {
+  .intro:hover .intro-text {
+    -webkit-transform: translateX(45%);
+            transform: translateX(45%);
+  }
   .empty {
     display: block;
   }
@@ -797,13 +804,6 @@ header {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-  }
-}
-
-@media screen and (min-width: 900px) {
-  .intro:hover .intro-text {
-    -webkit-transform: translateX(45%);
-            transform: translateX(45%);
   }
   .more-project .para:last-of-type {
     display: block;
