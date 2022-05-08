@@ -358,6 +358,7 @@ header {
 }
 @include media(786px) {
   .more-project {
+    @include con-flex(flex, row, center);
     padding-left: 0;
     .para:last-of-type {
       display: none;
