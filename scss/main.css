@@ -726,6 +726,9 @@ header {
 }
 
 @media screen and (min-width: 786px) {
+  .project {
+    margin-left: 10rem;
+  }
   .more-project {
     display: -webkit-box;
     display: -ms-flexbox;

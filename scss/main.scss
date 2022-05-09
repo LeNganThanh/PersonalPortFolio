@@ -370,6 +370,9 @@ header {
   }
 }
 @include media(786px) {
+  .project {
+    margin-left: 10rem;
+  }
   .more-project {
     @include con-flex(flex, row, center);
     padding-left: 0;
